@@ -11,10 +11,7 @@ public class arrow_function : MonoBehaviour
 {
     public float arrowPositionOffset;
     public GameObject arrowPrefab;
-
     public LineRenderer[] lineRenderers;
-
-    // Transform = position, rotation, and scale of an object 
     public Transform[] stripPositions;
     public Transform idlePosition;
     public Transform center;
@@ -22,10 +19,10 @@ public class arrow_function : MonoBehaviour
     public Vector3 currentPosition;
 
     bool isMouseDown;
-    
     Rigidbody arrow;
     Collider arrowCollider;
 
+    // Start 
     void Start()
     {
         lineRenderers[0].positionCount = 2; //vertices count 
@@ -36,7 +33,7 @@ public class arrow_function : MonoBehaviour
         CreateArrow();
     }
 
-    // Arrow Production
+    // Arrow Production - 
     void CreateArrow()
     {
         arrow = Instantiate(arrowPrefab).GetComponent<Rigidbody>();
@@ -47,10 +44,9 @@ public class arrow_function : MonoBehaviour
         ResetStrips();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame - 
     void Update()
     {
-
         if (isMouseDown)
         {
             Vector3 mousePosition = Input.mousePosition;
@@ -69,7 +65,7 @@ public class arrow_function : MonoBehaviour
         }
     }
 
-    // Mouse Controls 
+    // Mouse Controls -  
     void OnMouseDown()
     {
         isMouseDown = true;
@@ -92,17 +88,12 @@ public class arrow_function : MonoBehaviour
         lineRenderers[0].SetPosition(1, position);
         lineRenderers[1].SetPosition(1, position);
         
-        //Vector3 dir = center.position - position;
-         //   arrow.transform.position = position;
-        
         if(arrow) 
         {
             Vector3 dir = center.position - position;
             arrow.transform.position = position;
             arrow.transform.position = position + dir.normalized * arrowPositionOffset;
         }
-        
         Debug.Log(arrow.transform.position);
-
     }
 }

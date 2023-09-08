@@ -1,3 +1,8 @@
+// Arrow Function - 
+// Name: Chloe Park 
+// Aimed Completion Date: October 17, 2023
+// Purpose: Function of an Arrow 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +14,7 @@ public class arrow_function : MonoBehaviour
 
     public LineRenderer[] lineRenderers;
 
-    //Transform = position, rotation, and scale of an object 
+    // Transform = position, rotation, and scale of an object 
     public Transform[] stripPositions;
     public Transform idlePosition;
     public Transform center;
@@ -20,7 +25,6 @@ public class arrow_function : MonoBehaviour
     
     Rigidbody arrow;
     Collider arrowCollider;
-
 
     void Start()
     {

@@ -22,7 +22,7 @@ public class arrow_function : MonoBehaviour
     Rigidbody arrow;
     Collider arrowCollider;
 
-    // Used for initialization - 
+    // Used for initialization 
     void Start()
     {
         lineRenderers[0].positionCount = 2; //vertices count 
@@ -44,7 +44,7 @@ public class arrow_function : MonoBehaviour
         ResetStrips();
     }
 
-    // Update is called once per frame - 
+    // Update is called once per frame  
     void Update()
     {
         if (isMouseDown)
@@ -77,6 +77,7 @@ public class arrow_function : MonoBehaviour
         currentPosition = idlePosition.position;
     }
 
+    // Strip Controls - 
     void ResetStrips()
     {
         currentPosition = idlePosition.position;

@@ -22,7 +22,7 @@ public class arrow_function : MonoBehaviour
     Rigidbody arrow;
     Collider arrowCollider;
 
-    // Start 
+    // Used for initialization - 
     void Start()
     {
         lineRenderers[0].positionCount = 2; //vertices count 
